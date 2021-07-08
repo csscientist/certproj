@@ -7,7 +7,7 @@ RUN apt-get install -y apache2
 #Empty html dir
 RUN rm -rf /var/www/html/*
 #Copy the files to webserver
-COPY projCert/website /var/www/html/
+COPY website /var/www/html/
 #Start Apache service
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
